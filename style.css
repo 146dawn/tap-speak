@@ -1,0 +1,114 @@
+/* Base */
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 16px;
+  background: #fafafa;
+  color: #111;
+}
+
+header {
+  max-width: 720px;
+  margin: 0 auto 16px auto;
+}
+
+h1 {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+}
+
+p {
+  margin: 0;
+  opacity: 0.7;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Card */
+.cardWrap {
+  position: relative;
+  background: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 18px;
+  padding: 12px;
+  max-width: 720px;
+  margin: 12px auto;
+}
+
+#cardImg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  display: block;
+}
+
+.spell {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  padding: 12px;
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 720px;
+  margin: 10px auto;
+}
+
+.buttons button {
+  padding: 14px 10px;
+  border-radius: 16px;
+  border: 1px solid #e6e6e6;
+  background: white;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+}
+
+.buttons button:active {
+  transform: scale(0.99);
+}
+
+/* Speed controls */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 720px;
+  margin: 12px auto 0 auto;
+  background: white;
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.controls input[type="range"] {
+  flex: 1;
+}
+
+/* Meta */
+.meta {
+  max-width: 720px;
+  margin: 6px auto 0 auto;
+  opacity: 0.7;
+  text-align: center;
+}

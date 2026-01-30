@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tap & Speak</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#ffffff" />
+</head>
+<body>
+  <header>
+    <h1>Tap & Speak</h1>
+    <p>Listen → spelling appears + voice plays, then hides. Prev/Next moves. Shuffle toggles random order.</p>
+  </header>
+
+  <main>
+    <div class="cardWrap">
+      <img id="cardImg" alt="flashcard image" />
+      <div id="spell" class="spell hidden" aria-live="polite"></div>
+    </div>
+
+    <div class="buttons">
+      <button id="prevBtn" type="button">Prev</button>
+      <button id="listenBtn" type="button">Listen</button>
+      <button id="nextBtn" type="button">Next</button>
+      <button id="shuffleBtn" type="button" aria-pressed="false">Shuffle Off</button>
+    </div>
+
+    <div class="controls">
+      <label for="rate">Speed</label>
+      <input id="rate" type="range" min="0.6" max="1.4" step="0.05" value="1.0" />
+      <span id="rateValue">1.00×</span>
+    </div>
+
+    <div class="meta">
+      <span id="counter"></span>
+    </div>
+  </main>
+
+  <audio id="player" preload="auto"></audio>
+
+  <script src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
+</body>
+</html>
